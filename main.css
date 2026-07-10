@@ -1,28 +1,380 @@
+/* -- Design Tokens ---------------------------------------------------------- */
+:root {
+    --clr-bg:          #f0f4f8;
+    --clr-surface:     #ffffff;
+    --clr-surface-alt: #f7fafc;
+    --clr-border:      #e2e8f0;
+    --clr-border-focus:#4299e1;
+    --clr-text:        #1a202c;
+    --clr-text-muted:  #718096;
+    --clr-primary:     #3b82f6;
+    --clr-primary-dk:  #1d4ed8;
+    --clr-primary-lt:  #dbeafe;
+    --clr-danger:      #ef4444;
+    --clr-danger-lt:   #fee2e2;
+    --clr-shadow-sm:   rgba(0, 0, 0, .06);
+    --clr-shadow-md:   rgba(0, 0, 0, .10);
+
+    --radius-sm:   6px;
+    --radius-md:   12px;
+    --radius-full: 9999px;
+
+    --transition: .18s ease;
+
+    --font-base: 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-bg:          #0f172a;
+        --clr-surface:     #1e293b;
+        --clr-surface-alt: #273449;
+        --clr-border:      #334155;
+        --clr-border-focus:#60a5fa;
+        --clr-text:        #f1f5f9;
+        --clr-text-muted:  #94a3b8;
+        --clr-primary:     #60a5fa;
+        --clr-primary-dk:  #93c5fd;
+        --clr-primary-lt:  #1e3a5f;
+        --clr-danger:      #f87171;
+        --clr-danger-lt:   #3b1c1c;
+        --clr-shadow-sm:   rgba(0, 0, 0, .25);
+        --clr-shadow-md:   rgba(0, 0, 0, .35);
+    }
+}
+
+/* -- Reset & Base ----------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    font-family: helvetica;
-    background-color: red;
-}
-  
-ul {
-    font-family: monospace;
-}
-
-li {
-    list-style: circle;
-}
-  
-.list {
-    list-style: square;
+    font-family: var(--font-base);
+    background: var(--clr-bg);
+    color: var(--clr-text);
+    min-height: 100vh;
+    padding: 0 16px 60px;
+    line-height: 1.5;
+    transition: background var(--transition), color var(--transition);
 }
 
-.today {
+/* -- Header ---------------------------------------------------------------- */
+header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 36px 0 22px;
     display: flex;
-    
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 2px solid var(--clr-primary);
 }
-  
-#date, #time {
-    font-size: 12px;
-    padding: 10px;
-    font-style: italic;
-    font-weight: bold;
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--clr-primary);
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--clr-text);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* -- Live clock ------------------------------------------------------------ */
+.today {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    font-variant-numeric: tabular-nums;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.sep { color: var(--clr-border); }
+
+/* -- Main layout ----------------------------------------------------------- */
+main {
+    max-width: 720px;
+    margin: 28px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* -- Cards ----------------------------------------------------------------- */
+.add-task-panel,
+.task-list-panel {
+    background: var(--clr-surface);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    box-shadow:
+        0 1px 3px var(--clr-shadow-sm),
+        0 6px 20px var(--clr-shadow-md);
+    border: 1px solid var(--clr-border);
+    transition: box-shadow var(--transition);
+}
+
+/* -- Add-task form --------------------------------------------------------- */
+.form-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.form-row input[type="text"],
+.form-row input[type="datetime-local"] {
+    padding: 10px 14px;
+    border: 1.5px solid var(--clr-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.93rem;
+    font-family: var(--font-base);
+    color: var(--clr-text);
+    background: var(--clr-surface-alt);
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.form-row input[type="text"] { flex: 1 1 220px; }
+
+.form-row input[type="datetime-local"] {
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+}
+
+.form-row input:focus {
+    outline: none;
+    border-color: var(--clr-border-focus);
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, .18);
+    background: var(--clr-surface);
+}
+
+#add-btn {
+    padding: 10px 22px;
+    background: var(--clr-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-size: 0.93rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+#add-btn:hover {
+    background: var(--clr-primary-dk);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, .35);
+    transform: translateY(-1px);
+}
+
+#add-btn:active { transform: translateY(0); box-shadow: none; }
+
+.hint {
+    margin-top: 10px;
+    font-size: 0.74rem;
+    color: var(--clr-text-muted);
+}
+
+kbd {
+    background: var(--clr-surface-alt);
+    border: 1px solid var(--clr-border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.7rem;
+    font-family: var(--font-base);
+}
+
+/* -- List header ----------------------------------------------------------- */
+.list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.list-header h2 { margin-bottom: 0; }
+
+#task-count {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--clr-text-muted);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.filters { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.filter-btn {
+    padding: 5px 14px;
+    border: 1.5px solid var(--clr-border);
+    background: transparent;
+    border-radius: var(--radius-full);
+    font-size: 0.76rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--clr-text-muted);
+    transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--clr-border-focus);
+    color: var(--clr-primary);
+}
+
+.filter-btn.active {
+    background: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: #fff;
+}
+
+/* -- Task items ------------------------------------------------------------ */
+#task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--clr-surface-alt);
+    border: 1px solid var(--clr-border);
+    transition: background var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    animation: slideIn .2s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.task-item:hover {
+    background: var(--clr-primary-lt);
+    border-color: var(--clr-border-focus);
+    transform: translateX(2px);
+    box-shadow: 0 2px 8px var(--clr-shadow-sm);
+}
+
+.task-item.done { opacity: .5; }
+
+.task-text {
+    flex: 1;
+    font-size: 0.92rem;
+    word-break: break-word;
+    transition: color var(--transition);
+}
+
+.task-item.done .task-text {
+    text-decoration: line-through;
+    color: var(--clr-text-muted);
+}
+
+/* -- Check button ---------------------------------------------------------- */
+.check-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid var(--clr-primary);
+    background: transparent;
+    color: var(--clr-primary);
+    font-size: 0.72rem;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.check-btn:hover { background: var(--clr-primary); color: #fff; transform: scale(1.1); }
+
+.task-item.done .check-btn {
+    background: var(--clr-primary);
+    color: #fff;
+    border-color: var(--clr-primary);
+}
+
+/* -- Delete button --------------------------------------------------------- */
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--clr-danger);
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    line-height: 1;
+    opacity: 0;
+    transition: color var(--transition), background var(--transition), opacity var(--transition), transform var(--transition);
+}
+
+.task-item:hover .delete-btn { opacity: 1; }
+
+.delete-btn:hover {
+    color: #fff;
+    background: var(--clr-danger);
+    transform: scale(1.1);
+}
+
+/* -- Due date badge -------------------------------------------------------- */
+.due {
+    font-size: 0.7rem;
+    color: var(--clr-text-muted);
+    white-space: nowrap;
+    background: var(--clr-surface);
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--clr-border);
+}
+
+.due.overdue {
+    color: var(--clr-danger);
+    background: var(--clr-danger-lt);
+    border-color: var(--clr-danger);
+    font-weight: 600;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: .65; }
+}
+
+/* -- Empty state ----------------------------------------------------------- */
+.empty-msg {
+    text-align: center;
+    color: var(--clr-text-muted);
+    font-size: 0.88rem;
+    padding: 30px 0 10px;
+}
+
+/* -- Responsive ------------------------------------------------------------ */
+@media (max-width: 520px) {
+    body { padding: 0 10px 48px; }
+
+    .add-task-panel,
+    .task-list-panel { padding: 18px 16px; }
+
+    .form-row { flex-direction: column; }
+
+    .form-row input[type="text"],
+    .form-row input[type="datetime-local"],
+    #add-btn { width: 100%; }
+
+    header { padding: 24px 0 16px; }
+
+    .task-item { flex-wrap: wrap; }
+
+    .delete-btn { opacity: 1; }
 }

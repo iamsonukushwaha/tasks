@@ -5,31 +5,45 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Task Timeline</title>
-
 		<link rel="stylesheet" href="./main.css">
-
-		<style media="">
-			h1 {
-				font-family: helvetica;
-				color: darkblue;
-			}
-		</style>
-
 	</head>
 
 	<body>
-		<h1>Task Timeline</h1>
-		<div class="today">
-			<p id="date"></p>
-			<p id="time"></p>
-		</div>
-		<ul>
-			<li class="list">Edit the head</li>
-			<li class="list">Edit the body</li>
-			<li>Link to JavaScript</li>
-		</ul>
-		<script src="./app.js"></script>
+		<header>
+			<h1>Task Timeline</h1>
+			<div class="today">
+				<span id="date"></span>
+				<span class="sep">|</span>
+				<span id="time"></span>
+			</div>
+		</header>
 
+		<main>
+			<section class="add-task-panel">
+				<h2>Add a Task</h2>
+				<div class="form-row">
+					<input type="text" id="task-input" placeholder="What needs to be done?" maxlength="120" autocomplete="off" />
+					<input type="datetime-local" id="due-input" title="Due date &amp; time (optional)" />
+					<button id="add-btn">Add</button>
+				</div>
+				<p class="hint">Press <kbd>Enter</kbd> in the text field to add quickly.</p>
+			</section>
+
+			<section class="task-list-panel">
+				<div class="list-header">
+					<h2>Tasks <span id="task-count"></span></h2>
+					<div class="filters">
+						<button class="filter-btn active" data-filter="all">All</button>
+						<button class="filter-btn" data-filter="pending">Pending</button>
+						<button class="filter-btn" data-filter="done">Done</button>
+					</div>
+				</div>
+				<ul id="task-list"></ul>
+				<p id="empty-msg" class="empty-msg">No tasks yet — add one above!</p>
+			</section>
+		</main>
+
+		<script src="./app.js"></script>
 		<noscript>You need to enable JavaScript to view the full site.</noscript>
 	</body>
 
