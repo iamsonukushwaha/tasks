@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RIO ENTERPRISE | AGL Bathware & ENZO uPVC Profiles</title>
+
+<meta name="description" content="RIO ENTERPRISE, Patna — Authorized Dealer for AGL Bathware and ENZO uPVC Profiles. Since 2022.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f7f7f4;
+    color:#111820;
+    line-height:1.5;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+.container{
+    width:min(1160px,calc(100% - 40px));
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    color:#fff;
+    padding:18px 0;
+    transition:.3s;
+}
+
+header.scrolled{
+    background:rgba(8,12,16,.94);
+    backdrop-filter:blur(15px);
+    padding:12px 0;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-right:auto;
+}
+
+.logo-icon{
+    width:40px;
+    height:40px;
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-family:Manrope;
+    font-weight:800;
+    font-size:18px;
+}
+
+.logo-text strong{
+    display:block;
+    font-family:Manrope;
+    letter-spacing:.16em;
+    font-size:16px;
+}
+
+.logo-text small{
+    display:block;
+    font-size:8px;
+    letter-spacing:.3em;
+    opacity:.7;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.nav-links a{
+    opacity:.85;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    opacity:1;
+}
+
+.nav-call{
+    padding:10px 18px;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:50px;
+    font-size:12px;
+    font-weight:700;
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:94vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    background:#111;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(3,7,10,.9),
+        rgba(3,7,10,.6),
+        rgba(3,7,10,.25)
+    ),
+    url("https://www.thetilemuseum.com/_next/image?q=85&url=%2Fimages%2Fcollection-sanitary-ware.webp&w=3840");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    padding-top:80px;
+}
+
+.eyebrow{
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.22em;
+    margin-bottom:20px;
+    color:#cfd7d2;
+}
+
+.eyebrow.dark{
+    color:#68736d;
+}
+
+.hero h1{
+    font-family:Manrope;
+    font-size:clamp(45px,7vw,85px);
+    line-height:.98;
+    letter-spacing:-.055em;
+    max-width:850px;
+}
+
+.hero h1 span{
+    opacity:.72;
+    font-weight:500;
+}
+
+.hero-description{
+    max-width:570px;
+    font-size:17px;
+    line-height:1.7;
+    color:#dce2df;
+    margin:28px 0;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 22px;
+    border-radius:50px;
+    font-size:13px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#e0e9e2;
+    color:#101713;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#fff;
+}
+
+.btn-outline{
+    border:1px solid rgba(255,255,255,.5);
+    color:#fff;
+}
+
+.btn-outline-dark{
+    border:1px solid #b7c0ba;
+    color:#17201c;
+}
+
+.hero-trust{
+    margin-top:40px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    font-size:11px;
+    color:#c7cfcb;
+}
+
+.scroll{
+    position:absolute;
+    bottom:25px;
+    right:30px;
+    font-size:9px;
+    letter-spacing:.2em;
+    color:#c5ccc8;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    background:#0b1014;
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:27px 20px;
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+    display:block;
+    font-family:Manrope;
+    font-size:17px;
+}
+
+.stat span{
+    display:block;
+    color:#99a39f;
+    font-size:11px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section{
+    padding:110px 0;
+}
+
+.section-header{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:60px;
+    align-items:end;
+    margin-bottom:55px;
+}
+
+.section-header h2{
+    font-family:Manrope;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.045em;
+}
+
+.section-header p{
+    color:#68736d;
+    font-size:15px;
+    line-height:1.8;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    grid-template-rows:370px 370px;
+    gap:18px;
+}
+
+.product-card{
+    position:relative;
+    overflow:hidden;
+    background:#ddd;
+}
+
+.product-card.large{
+    grid-row:span 2;
+}
+
+.product-card img{
+    height:100%;
+    object-fit:cover;
+    transition:.7s;
+}
+
+.product-card:hover img{
+    transform:scale(1.05);
+}
+
+.product-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        0deg,
+        rgba(3,7,9,.88),
+        rgba(3,7,9,.05) 70%
+    );
+}
+
+.product-info{
+    position:absolute;
+    left:28px;
+    right:28px;
+    bottom:28px;
+    color:#fff;
+}
+
+.product-number{
+    font-size:9px;
+    letter-spacing:.18em;
+    font-weight:800;
+    color:#c6cfca;
+}
+
+.product-info h3{
+    font-family:Manrope;
+    font-size:29px;
+    margin:7px 0;
+}
+
+.product-info p{
+    max-width:450px;
+    font-size:12px;
+    line-height:1.6;
+    color:#d4dbd7;
+    margin-bottom:13px;
+}
+
+.product-link{
+    font-size:11px;
+    font-weight:800;
+    border-bottom:1px solid rgba(255,255,255,.5);
+}
+
+
+/* =========================
+   BRANDS
+========================= */
+
+.brand-section{
+    background:#e8ebe7;
+    padding:115px 0;
+}
+
+.brand-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.brand-copy h2{
+    font-family:Manrope;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.045em;
+}
+
+.brand-copy h2 em{
+    font-style:normal;
+    color:#758079;
+}
+
+.brand-copy p{
+    margin-top:25px;
+    color:#65706b;
+    font-size:15px;
+    line-height:1.8;
+}
+
+.brand-pills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:30px;
+}
+
+.brand-pills span{
+    padding:11px 16px;
+    border:1px solid #c2cac5;
+    border-radius:50px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.brand-image{
+    padding:25px;
+    background:#dde2dd;
+}
+
+.brand-image-inner{
+    overflow:hidden;
+    aspect-ratio:4/3;
+}
+
+.brand-image img{
+    height:100%;
+    object-fit:cover;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.dark-section{
+    background:#0b1014;
+    color:#fff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:90px;
+}
+
+.about-grid h2{
+    font-family:Manrope;
+    font-size:clamp(40px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.045em;
+}
+
+.about-grid h2 span{
+    color:#84908a;
+}
+
+.about-text p{
+    color:#b6bfbb;
+    font-size:15px;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.owner{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    margin-top:35px;
+}
+
+.owner-avatar{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#e0e9e2;
+    color:#111813;
+    display:grid;
+    place-items:center;
+    font-weight:800;
+}
+
+.owner small{
+    display:block;
+    color:#7d8983;
+    font-size:8px;
+    letter-spacing:.2em;
+}
+
+.owner strong{
+    display:block;
+    font-family:Manrope;
+    font-size:14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.gallery figure{
+    margin:0;
+}
+
+.gallery img{
+    aspect-ratio:1/1.1;
+    object-fit:cover;
+}
+
+.gallery figcaption{
+    margin-top:10px;
+    font-size:11px;
+    font-weight:700;
+    color:#58635d;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section{
+    background:#dfe7e1;
+    padding:95px 0;
+}
+
+.contact-layout{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:80px;
+    align-items:center;
+}
+
+.contact-layout h2{
+    font-family:Manrope;
+    font-size:clamp(40px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.045em;
+}
+
+.contact-layout h2 em{
+    font-style:normal;
+    color:#75817b;
+}
+
+.contact-layout p{
+    margin-top:22px;
+    max-width:500px;
+    color:#66716b;
+    line-height:1.8;
+}
+
+.contact-box{
+    background:#fff;
+    padding:28px 30px;
+    box-shadow:0 20px 60px rgba(20,35,25,.08);
+}
+
+.contact-row{
+    padding:15px 0;
+    border-bottom:1px solid #e1e5e2;
+}
+
+.contact-row span{
+    display:block;
+    color:#7a8580;
+    font-size:9px;
+    letter-spacing:.18em;
+    font-weight:800;
+    margin-bottom:5px;
+}
+
+.contact-row a{
+    font-weight:800;
+    font-size:14px;
+}
+
+.contact-actions{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================
+   LOCATION
+========================= */
+
+.location{
+    padding:75px 0;
+    background:#fff;
+}
+
+.location-layout{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+.location h2{
+    font-family:Manrope;
+    font-size:34px;
+    line-height:1.15;
+}
+
+.location-note{
+    max-width:340px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    border-left:1px solid #d7ddd9;
+    padding-left:25px;
+}
+
+.location-note strong{
+    font-size:28px;
+}
+
+.location-note p{
+    color:#6d7772;
+    font-size:12px;
+    line-height:1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0b1014;
+    color:#fff;
+    padding:55px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr .5fr;
+    gap:50px;
+}
+
+.footer-description{
+    color:#87928d;
+    font-size:12px;
+    max-width:300px;
+    margin-top:18px;
+}
+
+.footer-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    font-size:11px;
+    color:#b6bfbb;
+}
+
+.footer-right strong,
+.footer-right span{
+    display:block;
+}
+
+.footer-right strong{
+    font-family:Manrope;
+}
+
+.footer-right span{
+    color:#7e8984;
+    font-size:10px;
+    margin-top:5px;
+}
+
+.copyright{
+    border-top:1px solid rgba(255,255,255,.1);
+    margin-top:40px;
+    padding-top:17px;
+    color:#67716d;
+    font-size:9px;
+}
+
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:2000;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:#dce9df;
+    color:#102018;
+    font-size:12px;
+    font-weight:900;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+
+    .container{
+        width:calc(100% - 28px);
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:14px;
+        right:14px;
+        padding:20px;
+        background:#0b1014;
+        display:none;
+        flex-direction:column;
+        border:1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-call{
+        display:none;
+    }
+
+    .hero{
+        min-height:88vh;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .section{
+        padding:80px 0;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .section-header,
+    .brand-layout,
+    .about-grid,
+    .contact-layout{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+        grid-template-rows:420px 320px 320px;
+    }
+
+    .product-card.large{
+        grid-row:auto;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .location-layout{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+@media(max-width:480px){
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .product-grid{
+        grid-template-rows:390px 300px 300px;
+    }
+
+    .contact-row a{
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header id="header">
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">R</div>
+
+<div class="logo-text">
+<strong>RIO</strong>
+<small>ENTERPRISE</small>
+</div>
+
+</a>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#products">Products</a>
+<a href="#brands">Brands</a>
+<a href="#about">About</a>
+<a href="#showcase">Showcase</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+<a href="tel:+917667063167" class="nav-call">
+Call Now
+</a>
+
+
+<button class="menu" id="menu">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-bg"></div>
+
+<div class="container hero-content">
+
+<div class="eyebrow">
+PATNA • BIHAR • SINCE 2022
+</div>
+
+
+<h1>
+Better spaces begin
+<br>
+<span>with the right details.</span>
+</h1>
+
+
+<p class="hero-description">
+Premium bathware and modern uPVC profile solutions for homes,
+builders, architects and renovation projects.
+</p>
+
+
+<div class="buttons">
+
+<a
+href="https://wa.me/917667063167?text=Hello%20RIO%20ENTERPRISE%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+target="_blank"
+class="btn btn-primary">
+
+WhatsApp Enquiry ↗
+
+</a>
+
+
+<a href="#products" class="btn btn-outline">
+Explore Products
+</a>
+
+</div>
+
+
+<div class="hero-trust">
+
+<span>✓ Authorized Dealer</span>
+<span>✓ AGL Bathware</span>
+<span>✓ ENZO uPVC Profiles</span>
+
+</div>
+
+</div>
+
+
+<div class="scroll">
+SCROLL TO EXPLORE ↓
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat">
+<strong>Since 2022</strong>
+<span>Serving customers in Patna</span>
+</div>
+
+<div class="stat">
+<strong>2 Core Brands</strong>
+<span>Bathware + uPVC profiles</span>
+</div>
+
+<div class="stat">
+<strong>Direct Enquiry</strong>
+<span>Call or WhatsApp us</span>
+</div>
+
+<div class="stat">
+<strong>Patna, Bihar</strong>
+<span>Beur More • Anishabad</span>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="section" id="products">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow dark">
+WHAT WE OFFER
+</div>
+
+<h2>
+Solutions for modern
+<br>
+homes & projects.
+</h2>
+
+</div>
+
+
+<p>
+From bathroom fittings to durable window and door profiles,
+discover practical products with a clean, contemporary look.
+</p>
+
+</div>
+
+
+
+<div class="product-grid">
+
+
+<!-- AGL -->
+
+<article class="product-card large">
+
+<img
+src="https://aniportalimages.s3.amazonaws.com/media/details/ANI-20240724080303.jpg"
+alt="AGL Bathware showroom"
+loading="lazy"
+>
+
+<div class="product-overlay"></div>
+
+<div class="product-info">
+
+<div class="product-number">
+01 / BATHROOM
+</div>
+
+<h3>
+AGL Bathware
+</h3>
+
+<p>
+Sanitaryware, faucets, showers and bathroom solutions
+for elegant everyday spaces.
+</p>
+
+<a href="#contact" class="product-link">
+Enquire about bathware →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- ENZO -->
+
+<article class="product-card">
+
+<img
+src="https://www.encraft.in/experience-center/images/experience-center.jpg"
+alt="uPVC windows and doors"
+loading="lazy"
+>
+
+<div class="product-overlay"></div>
+
+<div class="product-info">
+
+<div class="product-number">
+02 / WINDOWS & DOORS
+</div>
+
+<h3>
+ENZO uPVC Profiles
+</h3>
+
+<p>
+Modern profile solutions for windows and doors.
+</p>
+
+<a href="#contact" class="product-link">
+Request details →
+</a>
+
+</div>
+
+</article>
+
+
+
+<!-- PROJECTS -->
+
+<article class="product-card">
+
+<img
+src="https://windowfab.in/img/windowfab-nov-blogimage.jpeg"
+alt="Modern uPVC window"
+loading="lazy"
+>
+
+<div class="product-overlay"></div>
+
+<div class="product-info">
+
+<div class="product-number">
+03 / PROJECTS
+</div>
+
+<h3>
+Made for your space
+</h3>
+
+<p>
+Solutions suitable for residential and project requirements.
+</p>
+
+<a href="#contact" class="product-link">
+Discuss your project →
+</a>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     BRANDS
+========================= -->
+
+<section class="brand-section" id="brands">
+
+<div class="container brand-layout">
+
+
+<div class="brand-copy">
+
+<div class="eyebrow dark">
+AUTHORIZED DEALER
+</div>
+
+<h2>
+
+Two product categories.
+<br>
+
+<em>One reliable destination.</em>
+
+</h2>
+
+
+<p>
+
+RIO ENTERPRISE brings together trusted bathware
+and uPVC profile solutions under one roof,
+making product enquiries simpler for homeowners,
+contractors and project teams.
+
+</p>
+
+
+<div class="brand-pills">
+
+<span>
+AGL Bathware
+</span>
+
+<span>
+ENZO uPVC Profile
+</span>
+
+</div>
+
+</div>
+
+
+
+<div class="brand-image">
+
+<div class="brand-image-inner">
+
+<img
+src="https://www.kajariaceramics.com/test_folder/mobileapp/uploads/news/1682262127_010.jpg"
+alt="Premium bathroom display"
+loading="lazy"
+>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section dark-section" id="about">
+
+<div class="container about-grid">
+
+
+<div>
+
+<div class="eyebrow">
+ABOUT RIO ENTERPRISE
+</div>
+
+<h2>
+
+Built around
+<br>
+
+<span>customer needs.</span>
+
+</h2>
+
+</div>
+
+
+<div class="about-text">
+
+<p>
+
+RIO ENTERPRISE has been serving customers since 2022
+from Kisan Colony, Beur More, Anishabad, Patna.
+
+</p>
+
+<p>
+
+We are an authorized dealer in AGL Bathware and
+ENZO uPVC Profile solutions, helping customers find
+suitable products for new construction, renovation
+and ongoing projects.
+
+</p>
+
+
+<div class="owner">
+
+<div class="owner-avatar">
+SK
+</div>
+
+<div>
+
+<small>
+OWNER
+</small>
+
+<strong>
+Siddhart Kr (Bhola)
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SHOWCASE
+========================= -->
+
+<section class="section" id="showcase">
+
+<div class="container">
+
+
+<div class="section-header">
+
+<div>
+
+<div class="eyebrow dark">
+VISUAL SHOWCASE
+</div>
+
+<h2>
+See the possibilities.
+</h2>
+
+</div>
+
+<p>
+
+Online reference images are used here to give visitors
+a quick visual feel for the product categories.
+
+</p>
+
+</div>
+
+
+
+<div class="gallery">
+
+
+<figure>
+
+<img
+src="https://aniportalimages.s3.amazonaws.com/media/details/ANI-20240724080303.jpg"
+alt="Bathware products"
+loading="lazy"
+>
+
+<figcaption>
+Bathware & fittings
+</figcaption>
+
+</figure>
+
+
+
+<figure>
+
+<img
+src="https://www.encraft.in/experience-center/images/experience-center.jpg"
+alt="uPVC windows and doors"
+loading="lazy"
+>
+
+<figcaption>
+uPVC windows & doors
+</figcaption>
+
+</figure>
+
+
+
+<figure>
+
+<img
+src="https://www.thetilemuseum.com/_next/image?q=85&url=%2Fimages%2Fcollection-sanitary-ware.webp&w=3840"
+alt="Modern bathroom interior"
+loading="lazy"
+>
+
+<figcaption>
+Modern bathroom inspiration
+</figcaption>
+
+</figure>
