@@ -126,7 +126,7 @@ footer{background:#061713;color:white;padding:48px 0 20px}.foot{display:grid;gri
 .callnav:before{content:"\\F4E7";font-family:"bootstrap-icons";margin-right:6px}
 .qicon i,.featureicon i{font-size:16px}
 .pbadge i{margin-right:4px}
-.direction:after{content:"";font-family:"bootstrap-icons";margin-left:7px}
+.direction:after{content:"\\F144";font-family:"bootstrap-icons";margin-left:7px}
 .btn i{font-size:1.05em}
 @media(max-width:480px){
  .whatsapp i{font-size:19px}
@@ -248,6 +248,43 @@ img{max-width:100%;height:auto}
   .whatsapp > i.bi-whatsapp{width:30px;height:30px;flex-basis:30px;font-size:18px}
 }
 </style>
+
+<style id="rio-catalog-style">
+.catalog-section{background:linear-gradient(180deg,#f7fbf8,#eef8f3)}
+.catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.catalog-card{background:#fff;border:1px solid #e1eae5;border-radius:22px;padding:22px;box-shadow:0 15px 40px rgba(7,31,27,.07);position:relative;overflow:hidden}
+.catalog-card:before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:linear-gradient(90deg,#0ba879,#ffc857,#ff8a32)}
+.catalog-card.en craft:before{background:linear-gradient(90deg,#0ba879,#0a6dca)}
+.catalog-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.catalog-logo{font-weight:950;font-size:20px;letter-spacing:.04em;color:#07382e}
+.catalog-type{font-size:7px;font-weight:950;letter-spacing:.12em;color:#71817a;background:#edf5f0;padding:7px 9px;border-radius:99px}
+.catalog-card h3{font:500 27px Georgia,serif;margin:18px 0 7px}
+.catalog-card p{font-size:11px;color:#66756e;line-height:1.7;margin:0 0 18px}
+.catalog-list{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.catalog-list span{background:#f5f8f5;border-radius:10px;padding:9px 8px;font-size:8px;font-weight:800;color:#40534b}
+.catalog-list i{color:#0b9e74;margin-right:4px}
+.catalog-actions{display:grid;gap:8px}
+.catalog-btn{display:flex;align-items:center;justify-content:center;gap:7px;min-height:43px;border-radius:12px;background:linear-gradient(135deg,#07382e,#0ba879);color:#fff;font-size:9px;font-weight:950;text-align:center}
+.catalog-link{display:flex;align-items:center;justify-content:center;gap:6px;color:#087f68;font-size:8px;font-weight:950;padding:7px}
+.group-banner{margin-top:18px;background:linear-gradient(135deg,#071f1b,#0c6d57);color:#fff;border-radius:22px;padding:19px 21px;display:flex;align-items:center;gap:17px;box-shadow:0 18px 45px rgba(7,31,27,.16)}
+.group-mark{width:56px;height:56px;flex:none;border-radius:16px;background:linear-gradient(135deg,#ffc857,#ff8a32);color:#12221c;display:grid;place-items:center;text-align:center;font-weight:950}
+.group-mark span{font-size:17px;line-height:1}.group-mark small{font-size:6px;letter-spacing:.15em}
+.group-banner strong{font-size:12px}.group-banner p{margin:4px 0 0;color:#b7cec5;font-size:9px;line-height:1.5}
+.group-links{margin-left:auto;display:flex;gap:7px}.group-links a{background:#ffffff12;border:1px solid #ffffff20;color:#fff;padding:9px 11px;border-radius:10px;font-size:8px;font-weight:900;white-space:nowrap}
+@media(max-width:800px){
+ .catalog-grid{grid-template-columns:1fr}
+ .catalog-card{padding:20px}
+ .group-banner{display:grid;grid-template-columns:auto 1fr;align-items:center}
+ .group-links{grid-column:1/-1;margin-left:0;display:grid;grid-template-columns:1fr 1fr}
+ .group-links a{text-align:center}
+}
+@media(max-width:480px){
+ .catalog-list{grid-template-columns:1fr 1fr}
+ .catalog-logo{font-size:18px}
+ .catalog-card h3{font-size:25px}
+ .group-banner{padding:16px}
+}
+</style>
 </head>
 <body>
 
@@ -256,7 +293,7 @@ img{max-width:100%;height:auto}
 <header>
 <div class="container nav">
 <a class="logo" href="#home"><span class="logoicon">R</span><span class="logotxt"><b>RIO ENTERPRISE</b><small>QUALITY • TRUST • SERVICE</small></span></a>
-<nav class="navlinks" id="nav"><a href="#products">Products</a><a href="#brands">Brands</a><a href="#why">Why Us</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+<nav class="navlinks" id="nav"><a href="#products">Products</a><a href="#brands">Brands</a><a href="#why">Why Us</a><a href="#gallery">Gallery</a><a href="#catalog">Catalogue</a><a href="#contact">Contact</a></nav>
 <a class="callnav" href="tel:+917667063167">CALL NOW</a><button class="menu" id="menu">☰</button>
 </div>
 </header>
@@ -314,17 +351,94 @@ img{max-width:100%;height:auto}
 <div class="g"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Modern home" loading="lazy"><div class="glabel">Residential projects</div></div>
 </div></div></section>
 
+
+<section class="section catalog-section" id="catalog">
+<div class="container">
+<div class="sectionhead reveal">
+<div><div class="kicker">Product catalogue</div><h2>Explore the <em>range.</em></h2></div>
+<p>Browse selected product categories from our partner brands. Use the official catalogue links for complete specifications, models and latest collections.</p>
+</div>
+
+<div class="catalog-grid reveal">
+
+<article class="catalog-card agl">
+<div class="catalog-top"><span class="catalog-logo">AGL</span><span class="catalog-type">SANITARY WARE</span></div>
+<h3>Asian Granito</h3>
+<p>Bathroom collections covering sanitaryware, faucets and allied bathroom products.</p>
+<div class="catalog-list">
+<span><i class="bi bi-droplet-half"></i> Wash Basins</span>
+<span><i class="bi bi-water"></i> One & Two Piece WCs</span>
+<span><i class="bi bi-badge-3d"></i> Wall Hung WCs</span>
+<span><i class="bi bi-shower"></i> Showers & Faucets</span>
+<span><i class="bi bi-house"></i> Concealed Cisterns</span>
+<span><i class="bi bi-tools"></i> Bathroom Accessories</span>
+</div>
+<div class="catalog-actions">
+<a href="https://aglasiangranito.com/sanitary-ware" target="_blank" rel="noopener" class="catalog-btn">Browse AGL Sanitary Ware <i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://aglasiangranito.com/catalogue/Bathware.pdf" target="_blank" rel="noopener" class="catalog-link">Download Bathware Catalogue <i class="bi bi-file-earmark-pdf"></i></a>
+</div>
+</article>
+
+<article class="catalog-card encraft">
+<div class="catalog-top"><span class="catalog-logo">ENCRAFT</span><span class="catalog-type">uPVC PROFILES</span></div>
+<h3>Encraft India</h3>
+<p>uPVC window and door systems engineered for residential and commercial applications.</p>
+<div class="catalog-list">
+<span><i class="bi bi-window"></i> Casement Windows</span>
+<span><i class="bi bi-layout-split"></i> Sliding Windows</span>
+<span><i class="bi bi-arrows-angle-expand"></i> Tilt & Turn</span>
+<span><i class="bi bi-door-open"></i> Sliding & Balcony Doors</span>
+<span><i class="bi bi-grid-3x3-gap"></i> French & Fold Systems</span>
+<span><i class="bi bi-shield-check"></i> Security & Performance</span>
+</div>
+<div class="catalog-actions">
+<a href="https://www.encraft.in/" target="_blank" rel="noopener" class="catalog-btn">Browse ENCRAFT <i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://www.encraft.in/upvc-door-and-window-systems" target="_blank" rel="noopener" class="catalog-link">View Door & Window Systems <i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+
+<article class="catalog-card enzo">
+<div class="catalog-top"><span class="catalog-logo">ENZO</span><span class="catalog-type">uPVC DOORS & WINDOWS</span></div>
+<h3>Enzocraft</h3>
+<p>uPVC solutions with residential and commercial applications, including doors and windows.</p>
+<div class="catalog-list">
+<span><i class="bi bi-window"></i> Casement Windows</span>
+<span><i class="bi bi-layout-split"></i> Sliding Windows</span>
+<span><i class="bi bi-grid"></i> French Windows</span>
+<span><i class="bi bi-door-open"></i> Casement Doors</span>
+<span><i class="bi bi-arrows-move"></i> Sliding Doors</span>
+<span><i class="bi bi-door-open-fill"></i> French Doors</span>
+</div>
+<div class="catalog-actions">
+<a href="https://enzocraft.in/" target="_blank" rel="noopener" class="catalog-btn">Browse ENZO <i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://enzocraft.in/sliding-windows" target="_blank" rel="noopener" class="catalog-link">View Product Range <i class="bi bi-arrow-right"></i></a>
+</div>
+</article>
+
+</div>
+
+<div class="group-banner reveal">
+<div class="group-mark"><span>DCJ</span><small>GROUP</small></div>
+<div><strong>ENCRAFT • ENZO</strong><p>Explore the connected brand ecosystem and product ranges directly from the official websites.</p></div>
+<div class="group-links">
+<a href="https://www.encraft.in/" target="_blank" rel="noopener">ENCRAFT <i class="bi bi-box-arrow-up-right"></i></a>
+<a href="https://enzocraft.in/" target="_blank" rel="noopener">ENZOCRAFT <i class="bi bi-box-arrow-up-right"></i></a>
+</div>
+</div>
+</div>
+</section>
+
 <section class="section contactsection" id="contact"><div class="container contactlayout reveal">
 <div class="contactintro"><div class="kicker">Let's talk</div><h2>Have a requirement?<br><em>Let's discuss it.</em></h2><p>Ask about bathware, uPVC profiles, product details, availability or your home/project requirement. Call or message directly.</p>
 <div class="ctas"><a class="btn call" href="tel:+917667063167"><i class="bi bi-telephone-fill"></i> Call Enquiry</a><a class="btn whatsapp" target="_blank" href="https://wa.me/917667063167?text=Hello%20RIO%20ENTERPRISE%2C%20I%20have%20an%20enquiry."><i class="bi bi-whatsapp"></i><span>WhatsApp Us <i class="bi bi-arrow-up-right"></i></a></div></div>
 <div class="contactbox">
 <div class="contactrow"><small>ENQUIRY NUMBER</small><a href="tel:+917667063167">+91 76670 63167</a></div>
-<div class="contactrow"><small>OWNER</small><a href="tel:+919234486802">Siddhart Kumar (Bhola)</a></div>
+<div class="contactrow"><small>OWNER</small><a href="tel:+919234486802">Siddhart Kr (Bhola)</a></div>
 <div class="contactrow"><small>ALTERNATE NUMBER</small><a href="tel:+919835808020">+91 98358 08020</a></div>
 <div class="contactrow"><small>BUSINESS</small><a>RIO ENTERPRISE • Since 2022</a></div>
 </div></div></section>
 
-<section class="section address"><div class="container addressbox reveal"><div><div class="kicker">Visit / Contact</div><h2>Kisan Colony, Beur More,<br>Anishabad, Patna — 800002</h2></div><div><p>Patna, Bihar<br>AGL Bathware • ENZO uPVC Profiles<br>Owner: Siddhart Kumar (Bhola)</p><a class="direction" href="https://www.google.com/maps/search/?api=1&query=Kisan%20Colony%20Beur%20More%20Anishabad%20Patna%20800002" target="_blank">OPEN IN MAPS</a></div></div></section>
+<section class="section address"><div class="container addressbox reveal"><div><div class="kicker">Visit / Contact</div><h2>Kisan Colony, Beur More,<br>Anishabad, Patna — 800002</h2></div><div><p>Patna, Bihar<br>AGL Bathware • ENZO uPVC Profiles<br>Owner: Siddhart Kr (Bhola)</p><a class="direction" href="https://maps.app.goo.gl/5gSevf2QuhfMZyUg8" target="_blank">OPEN IN MAPS ↗</a></div></div></section>
 </main>
 
 <footer><div class="container foot"><div><div class="logo"><span class="logoicon">R</span><span class="logotxt"><b style="color:white">RIO ENTERPRISE</b><small style="color:#7e9188">QUALITY • TRUST • SERVICE</small></span></div><p>Authorized Dealer for AGL Bathware and ENZO uPVC Profiles in Patna, Bihar. Serving since 2022.</p></div><div><b style="font-size:10px">QUICK LINKS</b><a href="#products">Products</a><a href="#brands">Brands</a><a href="#why">Why Us</a><a href="#contact">Contact</a></div><div><b style="font-size:10px">CONTACT</b><a href="tel:+917667063167">+91 76670 63167</a><a href="tel:+919234486802">+91 92344 86802</a><a href="tel:+919835808020">+91 98358 08020</a></div></div><div class="container copyright">© <span id="year"></span> RIO ENTERPRISE. All rights reserved.</div></footer>
